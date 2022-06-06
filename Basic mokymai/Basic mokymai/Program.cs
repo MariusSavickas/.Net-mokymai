@@ -43,12 +43,25 @@
             //Console.WriteLine("Įvestas simbolis {0}", Console.ReadKey().KeyChar);
             //Console.WriteLine("Įvestas simbolis {0}", (int)Console.ReadKey().KeyChar);
 
-            Console.WriteLine("Įveskite savo vardą, o aš atspėsiu pirmą raidę ");
-            Console.WriteLine("o štai mano pakartojimas:" + Console.ReadLine()[0]);
+            //Console.WriteLine("Įveskite savo vardą, o aš atspėsiu pirmą raidę ");
+            //Console.WriteLine("o štai mano pakartojimas:" + Console.ReadLine()[0]);
 
 
 
-            Console.ReadKey();
+            //Console.ReadKey();
+
+            Console.WriteLine("eilutė 1 " + 
+                Environment.NewLine + "eilutė 2 " +
+                Environment.NewLine + "eilutė 3 " );
+
+            Console.WriteLine(@" ""tekstas kabutėse"" \\
+eilutė 1
+eilutė 2
+eilutė 3");
+
+
+
+
         }
     }
 }
