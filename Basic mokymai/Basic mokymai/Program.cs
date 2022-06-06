@@ -50,16 +50,32 @@
 
             //Console.ReadKey();
 
-            Console.WriteLine("eilutė 1 " + 
-                Environment.NewLine + "eilutė 2 " +
-                Environment.NewLine + "eilutė 3 " );
+            //Console.WriteLine("eilutė 1 " + 
+            // Environment.NewLine + "eilutė 2 " +
+            // Environment.NewLine + "eilutė 3 " );
 
-            Console.WriteLine(@" ""tekstas kabutėse"" \\
-eilutė 1
-eilutė 2
-eilutė 3");
+            //Console.WriteLine(@" ""tekstas kabutėse"" \\
+            //eilutė 1
+            //eilutė 2
+            //eilutė 3");
 
 
+            Console.WriteLine("Marius");
+            Console.WriteLine("Įveskite savo vardą, o aš jį pakartosiu");
+            Console.WriteLine("o štai mano pakartojimas: " + Console.ReadLine());
+            Console.WriteLine("Įveskite savo vardą, o aš atspėsiu pirmą raidę ");
+            Console.WriteLine("Pirma raidė:" + Console.ReadLine()[0]);
+
+            Console.WriteLine("Įveskitę raidę ");
+            var key = Console.ReadKey();
+            Console.WriteLine("Įvestas simbolis {0}", key.KeyChar);
+            Console.WriteLine("Įvestas simbolis {0}", key.Key);
+            Console.WriteLine("Įvestas simbolis {0}", (int)key.KeyChar);
+
+            //Console.WriteLine(@" ""tekstas kabutėse"" \\
+            //eilutė 1
+            //eilutė 2
+            //eilutė 3");
 
 
         }
