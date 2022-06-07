@@ -61,6 +61,7 @@
 
 
             Console.WriteLine("Marius");
+
             Console.WriteLine("Įveskite savo vardą, o aš jį pakartosiu");
             Console.WriteLine("o štai mano pakartojimas: " + Console.ReadLine());
             Console.WriteLine("Įveskite savo vardą, o aš atspėsiu pirmą raidę ");
@@ -72,10 +73,13 @@
             Console.WriteLine("Įvestas simbolis {0}", key.Key);
             Console.WriteLine("Įvestas simbolis {0}", (int)key.KeyChar);
 
-            //Console.WriteLine(@" ""tekstas kabutėse"" \\
-            //eilutė 1
-            //eilutė 2
-            //eilutė 3");
+            
+            Console.WriteLine("Marius" + (int)key.KeyChar);
+
+            Console.WriteLine(@" ""konsolės meniu"" 
+            1 pirkti
+            2 Parduoti
+            3 likučiai");
 
 
         }
