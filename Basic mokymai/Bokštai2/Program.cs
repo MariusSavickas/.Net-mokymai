@@ -8,17 +8,21 @@
 
 
             //Kintamieji
-            string stulpas1 = "----Stulp1----";
+            //Apačia
+            string stulpas1 = "     ----Stulp1----";
             string stulpas2 = "----Stulp2----";
             string stulpas3 = "----Stulp3----";
+            //eilutė
             String eile1 = "1eile";
             String eile2 = "2eile";
             String eile3 = "3eile";
             String eile4 = "4eile";
             String eile5 = "5eile";
-            string eile6 = "6eile";
+            
+            //tušti
             string stul1 = "       |    ";
-            string stul2 = "         |    ";         
+            string stul2 = "         |    "; 
+            //pilnos lėkštutės
             string lekste1 = "      *|*   ";
             string lekste13 = "        *|*    ";
             string lekste2 = "     **|**  ";
@@ -35,7 +39,7 @@
             Console.WriteLine(eile3 + lekste2 + stul2 + stul2 );
             Console.WriteLine(eile4 +lekste3+stul2+stul2);
             Console.WriteLine(eile5+ lekste4 + stul2 + stul2);
-            Console.WriteLine(eile6 + stulpas1 + stulpas2 + stulpas3);
+            Console.WriteLine(stulpas1 + stulpas2 + stulpas3);
             Console.WriteLine("\n----tęsti----\n");
             Console.WriteLine(Console.ReadLine());
 
@@ -46,7 +50,7 @@
             Console.WriteLine(eile3 + lekste2 + stul2 + stul2);
             Console.WriteLine(eile4 + lekste1 + stul2 + stul2);
             Console.WriteLine(eile5 + stul1 + stul2 + stul2);
-            Console.WriteLine(eile6 + stulpas1 + stulpas2 + stulpas3);
+            Console.WriteLine(stulpas1 + stulpas2 + stulpas3);
             Console.WriteLine("\n----tęsti----\n");
             Console.WriteLine(Console.ReadLine());
 
@@ -58,7 +62,7 @@
             Console.WriteLine(eile3 + stul1 + stul2 + stul2);
             Console.WriteLine(eile4 + stul1 + stul2 + stul2);
             Console.WriteLine(eile5 + stul1 + stul2 + stul2);
-            Console.WriteLine(eile6 + stulpas1 + stulpas2 + stulpas3);
+            Console.WriteLine(stulpas1 + stulpas2 + stulpas3);
             Console.WriteLine("\n----tęsti----\n");
             Console.WriteLine(Console.ReadLine());
 
@@ -69,7 +73,7 @@
             Console.WriteLine(eile3 + stul1 + stul2 + stul2);
             Console.WriteLine(eile4 + stul1 + stul2 + stul2);
             Console.WriteLine(eile5 + lekste4 + lekste43 + lekste43);
-            Console.WriteLine(eile6 + stulpas1 + stulpas2 + stulpas3);
+            Console.WriteLine(stulpas1 + stulpas2 + stulpas3);
             Console.WriteLine("\n----tęsti----\n");
             Console.WriteLine(Console.ReadLine());
 
@@ -80,7 +84,7 @@
             Console.WriteLine(eile3 + stul1 + stul2 + stul2);
             Console.WriteLine(eile4 + stul1 + stul2 + lekste13);
             Console.WriteLine(eile5 + lekste4 + lekste33 + lekste23);
-            Console.WriteLine(eile6 + stulpas1 + stulpas2 + stulpas3);
+            Console.WriteLine(stulpas1 + stulpas2 + stulpas3);
             Console.WriteLine("\n----tęsti----");
             Console.WriteLine(Console.ReadLine());
 
@@ -91,7 +95,7 @@
             Console.WriteLine(eile3 + stul1 + stul2 + stul2);
             Console.WriteLine(eile4 + lekste1 + stul2 + lekste13);
             Console.WriteLine(eile5 + lekste4 + lekste33 + lekste23);
-            Console.WriteLine(eile6 + stulpas1 + stulpas2 + stulpas3);
+            Console.WriteLine(stulpas1 + stulpas2 + stulpas3);
             Console.WriteLine("\n----tęsti----");
             Console.WriteLine(Console.ReadLine());
 
@@ -102,7 +106,7 @@
             Console.WriteLine(eile3 + stul1 + lekste23 + stul2);
             Console.WriteLine(eile4 + lekste1 + lekste23 + lekste13);
             Console.WriteLine(eile5 + lekste4 + lekste23 + lekste23);
-            Console.WriteLine(eile6 + stulpas1 + stulpas2 + stulpas3);
+            Console.WriteLine(stulpas1 + stulpas2 + stulpas3);
             Console.WriteLine("\n----tęsti----\n");
             Console.WriteLine(Console.ReadLine());
 
@@ -113,7 +117,7 @@
             Console.WriteLine(eile3 + stul1 + stul2 + lekste23);
             Console.WriteLine(eile4 + stul1 + stul2 + lekste33);
             Console.WriteLine(eile5 + stul1 + stul2 + lekste43);
-            Console.WriteLine(eile6 + stulpas1 + stulpas2 + stulpas3);
+            Console.WriteLine(stulpas1 + stulpas2 + stulpas3);
             Console.WriteLine("\n----tęsti----\n");
             Console.WriteLine(Console.ReadLine());
 
@@ -124,7 +128,7 @@
             Console.WriteLine(eile3 + stul1 + stul2 + lekste23.Replace("*", "\""));
             Console.WriteLine(eile4 + stul1 + stul2 + lekste33.Replace("*", "\""));
             Console.WriteLine(eile5 + stul1 + stul2 + lekste43.Replace("*", "\""));
-            Console.WriteLine(eile6 + stulpas1 + stulpas2 + stulpas3);
+            Console.WriteLine(stulpas1 + stulpas2 + stulpas3);
             Console.WriteLine("\n----tęsti----\n");
             Console.WriteLine(Console.ReadLine());
 
@@ -132,17 +136,18 @@
             //10 uzduotis užduotis
             Console.WriteLine("paprašykite naudotojo nupiešti 1 sulpelio 1 eilutę. Išveskite visą Tower of Hanoi su perpiešta pirma eilute\n");
             Console.WriteLine("\nNupieškite 1 stulpelio 1 eilutę, o aš ją atkartosiu\n");
-            
-            Console.WriteLine(eile1 + Console.ReadLine()[1] + stul1 + stul2 + stul2);
+            string įvestis = Console.ReadLine();
+
+            Console.WriteLine(eile1 + įvestis + stul1 + stul2 + stul2);
             Console.WriteLine(eile2 + stul1 + stul2 + lekste13.Replace("*", "\""));
             Console.WriteLine(eile3 + stul1 + stul2 + lekste23.Replace("*", "\""));
             Console.WriteLine(eile4 + stul1 + stul2 + lekste33.Replace("*", "\""));
             Console.WriteLine(eile5 + stul1 + stul2 + lekste43.Replace("*", "\""));
-            Console.WriteLine(eile6 + stulpas1 + stulpas2 + stulpas3);
+            Console.WriteLine(stulpas1 + stulpas2 + stulpas3);
             Console.WriteLine("\n----tęsti----\n");
             Console.WriteLine(Console.ReadLine());
             
-            
+
 
         }
     }
