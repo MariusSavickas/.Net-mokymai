@@ -25,6 +25,13 @@
             Console.WriteLine(" \'pasirinkimas yra: {0} \'", (int)Console.ReadKey().KeyChar - 48);
             //naudokite kompozicija
             //Naudokite interpoliacija
+            //-. Dėstytojo Padarykite konsolės meniu skirtingose eilutėse(1) Pirkti, (2) Parduoti, (3) Likučiai.
+            //Išveskite pasirinktą meniu punktą su tekstu "pasirinkimas yra ___" (kabutės irgi būtinos).
+            // -.1 Naudokite konkatinaciją
+            // -.2 Naudokite kompoziciją
+            // -.3 Naudokite interpoliaciją
+            Console.WriteLine("(1) Pirkti \n(2) Parduoti \n(3) Likučiai");
+            Console.WriteLine($"     \"pasirinkimas yra : {Console.ReadLine()} \" " );
 
             /*
                         //----------------------------
@@ -78,7 +85,7 @@
             Console.WriteLine(" **       * |  *          **");
             Console.WriteLine("  **        * *          **");
             Console.WriteLine("   **                 **");
-            //nesigavo pakeisti Console.WriteLine("     *****************".Replace("*", \''));
+            Console.WriteLine("     *****************".Replace("*", "\""));
         } 
 
     }
