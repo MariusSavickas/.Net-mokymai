@@ -138,7 +138,7 @@
             Console.WriteLine("\nNupieškite 1 stulpelio 1 eilutę, o aš ją atkartosiu\n");
             string įvestis = Console.ReadLine();
 
-            Console.WriteLine(eile1 + įvestis + stul1 + stul2 + stul2);
+            Console.WriteLine(eile1 + įvestis + stul2 + stul2);
             Console.WriteLine(eile2 + stul1 + stul2 + lekste13.Replace("*", "\""));
             Console.WriteLine(eile3 + stul1 + stul2 + lekste23.Replace("*", "\""));
             Console.WriteLine(eile4 + stul1 + stul2 + lekste33.Replace("*", "\""));
