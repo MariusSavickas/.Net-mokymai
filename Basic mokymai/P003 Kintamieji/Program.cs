@@ -110,7 +110,64 @@
 
             Console.WriteLine($"{skaicius}   {teisybe}   {vardas}");
 
+            /*UŽDUOTIS
+  ************************************************************************************************************************
+ PARAŠYTI PROGRAMĄ KURIOJE SAUGOME :
+  • MOKYKLOS PAVADINIMĄ
+  • KURSO PAVADINIMĄ
+  • STUDENTŲ SKAIČIŲ
+  • ŠIANDIENOS DATĄ
+  • VISUS KINTAMUOSIUS IŠVESTI Į EKRANĄ
+  */
+            var mokyklosPavadinimas = "CodeAcademy";
+            var kursoPavadinimas = "CA.NET2";
+            var studentuSkaicius = 19;
+            var siandienosData = new DateTime(2022, 06, 08);
+            Console.WriteLine("kursoPavadinimas-{0}\nkursoPavadinimas-{1}\nstudentuSkaicius-{2}\nsiandienosData-{3}",
+               mokyklosPavadinimas,
+               kursoPavadinimas,
+               studentuSkaicius,
+               siandienosData.ToShortDateString());
+            Console.WriteLine($"mokyklosPavadinimas - {mokyklosPavadinimas} \n " +
+                $"kursoPavadinimas - {kursoPavadinimas} \n " +
+                $"studentuSkaicius - {studentuSkaicius} \n " +
+                $"siandienosData - {siandienosData}");
 
+            /*UŽDUOTIS
+               ************************************************************************************************************************
+              PAPILDYTI PROGRAMĄ IR PRIDĖTI:
+               • KURSO PRADŽIOS DATĄ
+               • KURSO PABAIGOS DATĄ
+               • Sužinoti skirtumą tarp kurso pradžios ir dabartinės datos (dienomis)
+               • VISUS KINTAMUOSIUS IŠVESTI Į EKRANĄ
+               */
+            Console.WriteLine("------------------------------------------------------------");
+            var kursoPradziosData = new DateTime(2022, 05, 30);
+            var kursoPabaigosData = new DateTime(2022, 12, 01);
+            TimeSpan kursoTrukme = siandienosData - kursoPradziosData;
+            Console.WriteLine("{0}\n{1}\n{2}",
+                kursoPradziosData.ToShortDateString(),
+                kursoPabaigosData.ToShortDateString(),
+                kursoTrukme.Days);
+            /*UŽDUOTIS
+           ************************************************************************************************************************
+           Sukurkite tris kintamuosius. tekstinio, sveiko skaitmens ir loginio tipo. 
+           Parašykite programą kuri į konsolę visus aprašytus kintamuosius vienoje eilutėje atskiriant tarpu
+           */
+            Console.WriteLine("------------------------------------------------------------");
+            var tekstinioTipoKintamasis = "tekstinioTipoKintamasis";
+            var sveikoSkaitmenoTipoKintamasis = 123;
+            var loginioTipoKintamasis = true;
+            Console.WriteLine($"{tekstinioTipoKintamasis} {sveikoSkaitmenoTipoKintamasis} {loginioTipoKintamasis}");
+
+            /* UŽDUOTIS
+          ************************************************************************************************************************
+          Sukurkite tris sveikojo skaitmens tipo kintamuosius.
+          Parašykite programą kuri į konsolę visus aprašytus kintamuosius atskiriant tarpu
+          - panaudokite konkatinacija
+          - panaudokite kompoziciją
+          - panaudokite interpociacija
+          */
         }
     }
 }
