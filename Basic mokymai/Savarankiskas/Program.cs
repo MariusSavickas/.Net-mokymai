@@ -83,32 +83,31 @@ var LaipsniaiF_30 = (LaipsniaiC - 30) * 9 / 5 + 32;
 var LaipsniaiF_35 = (LaipsniaiC - 35) * 9 / 5 + 32;
 var LaipsniaiF_40 = (LaipsniaiC -40) * 9 / 5 + 32;
 
+
+
 Console.WriteLine("|--------------------|");
-Console.WriteLine("|   ^F     _    ^C   |"); //8 0 8
-Console.WriteLine($"|    {LaipsniaiF40} - | | - {LaipsniaiC+40}  |"  );
-Console.WriteLine($"|    {LaipsniaiF35} - | | - {LaipsniaiC + 35}  |");
-Console.WriteLine($"|    {LaipsniaiF30} - | | - {LaipsniaiC + 30}   |");
-Console.WriteLine($"|    {LaipsniaiF25} - | | - {LaipsniaiC + 25}   |");
-Console.WriteLine($"|    {LaipsniaiF20} - | | - {LaipsniaiC + 20}   |");
-Console.WriteLine($"|    {LaipsniaiF15} - | | - {LaipsniaiC + 15}   |");
-Console.WriteLine($"|    {LaipsniaiF10} - |# | - {LaipsniaiC + 10}   |");
-Console.WriteLine($"|    {LaipsniaiF5} - |# | - {LaipsniaiC + 5}   |");
-Console.WriteLine($"|    {LaipsniaiF} - |# | - {LaipsniaiC}   |");
-Console.WriteLine($"|    {LaipsniaiF_5} - |# | - {LaipsniaiC-5}   |");
-Console.WriteLine($"|    {LaipsniaiF_10} - |# | - {LaipsniaiC-10}   |");
-Console.WriteLine($"|    {LaipsniaiF_15} - |# | - {LaipsniaiC-15}   |");
-Console.WriteLine($"|    {LaipsniaiF_20} - |# | - {LaipsniaiC-20}   |");
-Console.WriteLine($"|    {LaipsniaiF_25} - |# | - {LaipsniaiC-25}   |");
-Console.WriteLine($"|    {LaipsniaiF_30} - |# | - {LaipsniaiC-30}   |");
-Console.WriteLine($"|    {LaipsniaiF_35} - |# | - {LaipsniaiC-35}   |");
-Console.WriteLine($"|    {LaipsniaiF_40} - |# | - {LaipsniaiC-40}   |");
-Console.WriteLine("|         '***`           |");
-Console.WriteLine("|        (*****)      |");
-Console.WriteLine("|         `---'       |");
+Console.WriteLine("|   ^F     _     ^C  |"); //8 0 8
+Console.WriteLine($"|{LaipsniaiF40,6} - |{LaipsniaiC >= LaipsniaiC + 40}| - {LaipsniaiC+40,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF35,6} - |{LaipsniaiC >= LaipsniaiC + 35}| - {LaipsniaiC + 35,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF30,6} - |{LaipsniaiC >= LaipsniaiC + 30}| - {LaipsniaiC + 30,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF25,6} - |{LaipsniaiC >= LaipsniaiC + 25}| - {LaipsniaiC + 25,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF20,6} - |{LaipsniaiC >= LaipsniaiC + 20}| - {LaipsniaiC + 20,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF15,6} - |{LaipsniaiC >= LaipsniaiC + 15}| - {LaipsniaiC + 15,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF10,6} - |{LaipsniaiC >= LaipsniaiC + 10}| - {LaipsniaiC + 10,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF5,6} - |{LaipsniaiC >= LaipsniaiC+5}| - {LaipsniaiC + 5,4} |".ToString().Replace("True", "#").Replace("False"," "));
+Console.WriteLine($"|{LaipsniaiF,6} - |{LaipsniaiC >= LaipsniaiC}| - {LaipsniaiC,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF_5,6} - |{LaipsniaiC >= LaipsniaiC - 5}| - {LaipsniaiC-5,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF_10,6} - |{LaipsniaiC >= LaipsniaiC - 10}| - {LaipsniaiC-10,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF_15,6} - |{LaipsniaiC >= LaipsniaiC - 15}| - {LaipsniaiC-15,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF_20,6} - |{LaipsniaiC >= LaipsniaiC - 20}| - {LaipsniaiC-20,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF_25,6} - |{LaipsniaiC >= LaipsniaiC - 25}| - {LaipsniaiC-25,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF_30,6} - |{LaipsniaiC >= LaipsniaiC - 30}| - {LaipsniaiC-30,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF_35,6} - |{LaipsniaiC >= LaipsniaiC - 35}| - {LaipsniaiC-35,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine($"|{LaipsniaiF_40,6} - |{LaipsniaiC >= LaipsniaiC - 40}| - {LaipsniaiC-40,4} |".ToString().Replace("True", "#").Replace("False", " "));
+Console.WriteLine("|        '***`       |");
+Console.WriteLine("|       (*****)      |");
+Console.WriteLine("|        `---'       |");
 Console.WriteLine("|____________________|");
-
-
-
 
 
 

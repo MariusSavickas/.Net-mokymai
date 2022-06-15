@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P004_Tipukonversijos", "P00
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P004_MatematiniaiOperatoriai", "P004_MatematiniaiOperatoriai\P004_MatematiniaiOperatoriai.csproj", "{1A21D2B2-31DA-44AD-A9F2-D8096E61B368}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P005_Operatoriai", "P005_Operatoriai\P005_Operatoriai.csproj", "{4E0DF3F1-3E84-4953-93D1-EEAA4BCB26EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P005_Operatoriai", "P005_Operatoriai\P005_Operatoriai.csproj", "{4E0DF3F1-3E84-4953-93D1-EEAA4BCB26EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Savarankiskas", "Savarankiskas\Savarankiskas.csproj", "{36A7CB14-CE8B-40C2-8F09-D8EAB9C76CA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Savarankiskas", "Savarankiskas\Savarankiskas.csproj", "{36A7CB14-CE8B-40C2-8F09-D8EAB9C76CA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P006_Loginiai", "P006_Loginiai\P006_Loginiai.csproj", "{F02E113A-5B6D-454D-9283-550F0558F4CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{36A7CB14-CE8B-40C2-8F09-D8EAB9C76CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36A7CB14-CE8B-40C2-8F09-D8EAB9C76CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36A7CB14-CE8B-40C2-8F09-D8EAB9C76CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F02E113A-5B6D-454D-9283-550F0558F4CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F02E113A-5B6D-454D-9283-550F0558F4CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F02E113A-5B6D-454D-9283-550F0558F4CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F02E113A-5B6D-454D-9283-550F0558F4CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
