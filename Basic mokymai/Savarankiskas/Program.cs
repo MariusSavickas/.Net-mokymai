@@ -110,6 +110,9 @@ Console.WriteLine("|        `---'       |");
 Console.WriteLine("|____________________|");
 
 
+Console.WriteLine("\n\n----------------------------------\n\n");
+
+
 
 
 /*
@@ -134,3 +137,41 @@ Console.WriteLine("|____________________|");
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 90min >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 30min <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
  */
+
+Console.WriteLine("Kelias\n");
+Console.WriteLine("Įveskite atstumą tarp A ir B kilometrais"); //Vartotojas prašomas įvesti kintamuosius:
+var atstumas = Convert.ToDouble(Console.ReadLine()); //atstumą
+Console.WriteLine("Įveskite A transporto priemonės greitį (km/h)");
+var GreitisA = Convert.ToDouble(Console.ReadLine());  //greitį A
+Console.WriteLine("Įveskite B transporto priemonės greitį (km/h)");
+var GreitisB = Convert.ToDouble(Console.ReadLine());  //greitį B
+
+Console.WriteLine("------------------------------------\n");
+
+//PASKAIČIUOTI ATSTUMĄ NUO A IKI VIETOS KURIOJE TRASPORTO PRIEMONĖS SUTITIKS METRAIS. 
+var atstumasmetrais = atstumas * 1000; //atstumas tarp A ir B metrais
+var GreitisAmperS = GreitisA * 1000 / 3600; //Formulė km/h pasiversti į m/s
+var GreitisBmperS = GreitisB * 1000 / 3600; //Formulė km/h pasiversti į m/s
+
+
+
+var susitikimas = atstumas / (GreitisA + GreitisB);//Trukmė Per kiek laiko abi įveikia atstumą valandomis
+var susitikimas1 = susitikimas * GreitisA *1000; // Kada susitiks, kiek atstumo įveiks A transporto priemonė
+
+
+Console.WriteLine($"Transporto priemonės susitiks. A nuvažiavus {susitikimas1} metrų\n");
+Console.WriteLine("------------------------------------\n");
+
+//PASKAIČIUOTI LAIKĄ KADA TRASPORTO PRIEMONĖS SUSITIKS SEKUNDĖMIS.
+var susitikimassek = susitikimas * 3600; //valandas verčiam į sekundes
+Console.WriteLine($" Transporto priemonės susitiks sekundėmis po: {susitikimassek} sek.");
+Console.WriteLine("------------------------------------\n");
+
+//PASKAIČIUOTI LAIKĄ, KADA TRASPORTUO PRIEMONĖS PASIEKS GALIUTINIUS TAŠKUS MINUTĖMIS.
+
+var nuvaziuosAmin = atstumas / GreitisA * 60;
+var nuvaziuosBmin = atstumas / GreitisB * 60;
+
+Console.WriteLine($"A transporto priemonė nuvažiuos atstumą per {nuvaziuosAmin} min." );
+Console.WriteLine($"B transporto priemonė nuvažiuos atstumą per {nuvaziuosBmin} min.");
+Console.WriteLine("------------------------------------\n");
