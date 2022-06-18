@@ -175,3 +175,75 @@ var nuvaziuosBmin = atstumas / GreitisB * 60;
 Console.WriteLine($"A transporto priemonė nuvažiuos atstumą per {nuvaziuosAmin} min." );
 Console.WriteLine($"B transporto priemonė nuvažiuos atstumą per {nuvaziuosBmin} min.");
 Console.WriteLine("------------------------------------\n");
+
+//PASKAIČIUOTI KIEK GRAMŲ CO2 IŠSKYRĖ ABI TRASPORTO PIEMONĖS KARTU SUDĖJUS. CO2 NORMA YRA 95 g/km.
+
+var CO2 = atstumas * 2 * 95;
+Console.WriteLine($" CO2 kelionės metu išskyrė: {CO2}");
+Console.WriteLine("------------------------------------\n");
+
+
+var seg = atstumas / 20; //Formulė pasidaryti 20 lygių segmentų
+
+//V ieškojimas segmente
+var VKM = susitikimas1 / 1000; //Kiek nuvažiuos A transporto priemonė metrus pasiverčiam į km.
+
+var seg1 = (VKM >= seg).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg2 = (!(seg <= VKM) || (VKM>= seg*2)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg3 = (!(seg*2 <= VKM) ||(VKM >= seg * 3)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg4 = (!(seg*3 <= VKM) ||(VKM >= seg * 4)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg5 = (!(seg*4 <= VKM) ||(VKM >= seg * 5)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg6 = (!(seg*5 <= VKM) ||(VKM >= seg * 6)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg7 = (!(seg*6 <= VKM) || (VKM >= seg * 7)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg8 = (!(seg*7 <= VKM) || (VKM >= seg * 8)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg9 = (!(seg*8 <= VKM) || (VKM >= seg * 9)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg10 = (!(seg*9 <= VKM) || (VKM >= seg * 10)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg11 = (!(seg * 10 <= VKM) || (VKM >= seg * 11)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg12 = (!(seg * 11 <= VKM) || (VKM >= seg * 12)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg13 = (!(seg * 12 <= VKM) || (VKM >= seg * 13)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg14 = (!(seg * 13 <= VKM) || (VKM >= seg * 14)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg15 = (!(seg * 14 <= VKM) || (VKM >= seg * 15)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg16 = (!(seg * 15 <= VKM) || (VKM >= seg * 16)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg17 = (!(seg * 16 <= VKM) || (VKM >= seg * 17)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg18 = (!(seg * 17 <= VKM) || (VKM >= seg * 18)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg19 = (!(seg * 18 <= VKM) || (VKM >= seg * 19)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+var seg20 = (!(seg * 19 <= VKM) || (VKM >= seg * 20)).ToString().Replace("False", "____V___|").Replace("True", "________|");
+
+//Kelias ilgis kuriame susitiks
+var seg21 = (VKM >= seg).ToString().Replace("False", "        ").Replace("True", "-------");
+var seg22 = ((seg <= VKM) || (VKM >= seg * 2)).ToString().Replace("False", "      ").Replace("True", "-------");
+var seg23 = ((seg * 2 <= VKM) || (VKM >= seg * 3)).ToString().Replace("False", "        ").Replace("True", "-------");
+var seg24 = ((seg * 3 <= VKM) || (VKM >= seg * 4)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg25 = ((seg * 4 <= VKM) || (VKM >= seg * 5)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg26 = ((seg * 5 <= VKM) || (VKM >= seg * 6)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg27 = ((seg * 6 <= VKM) || (VKM >= seg * 7)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg28 = ((seg * 7 <= VKM) || (VKM >= seg * 8)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg29 = ((seg * 8 <= VKM) || (VKM >= seg * 9)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg30 = ((seg * 9 <= VKM) || (VKM >= seg * 10)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg31 = ((seg * 10 <= VKM) || (VKM >= seg * 11)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg32 = ((seg * 11 <= VKM) || (VKM >= seg * 12)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg33 = ((seg * 12 <= VKM) || (VKM >= seg * 13)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg34 = ((seg * 13 <= VKM) || (VKM >= seg * 14)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg35 = ((seg * 14 <= VKM) || (VKM >= seg * 15)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg36 = ((seg * 15 <= VKM) || (VKM >= seg * 16)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg37 = ((seg * 16 <= VKM) || (VKM >= seg * 17)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg38 = ((seg * 17 <= VKM) || (VKM >= seg * 18)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg39 = ((seg * 18 <= VKM) || (VKM >= seg * 19)).ToString().Replace("False", "        ").Replace("True", "---------");
+var seg40 = ((seg * 19 <= VKM) || (VKM >= seg * 20)).ToString().Replace("False", "        ").Replace("True", "---------");
+
+
+
+
+//b) segmento ilgis, 20 lygių segmentų
+Console.WriteLine($"| {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  | {seg,3}km  |");
+Console.WriteLine("|        |        |        |        |        |        |        |        |        |        |        |        |        |        |        |        |        |        |        |        |    ");
+Console.WriteLine($"A{seg1}{seg2}{seg3}{seg4}{seg5}{seg6}{seg7}{seg8}{seg9}{seg10}{seg11}{seg12}{seg13}{seg14}" +
+    $"{seg15}{seg16}{seg17}{seg18}{seg19}{seg20}");
+Console.WriteLine($"|{seg21}{seg22}{VKM}km{seg23}{seg24}{seg25}{seg26}{seg27}{seg28}{seg29}{seg30}{seg31}{seg32}{seg33}" +
+    $"{seg34}{seg35}{seg36}{seg37}{seg38}{seg39}{seg40}");
+//a) visas kelio ilgis 
+Console.WriteLine($"|------------------------------------------------------------------------------------{atstumas}km------------------------------------------------------------------------------------------|");
+
+//d) Transporto važiavimo trukmė
+Console.WriteLine($">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> {nuvaziuosAmin}min >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+Console.WriteLine($"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< {nuvaziuosBmin}min <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
