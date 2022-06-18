@@ -209,7 +209,7 @@ var seg18 = (!(seg * 17 <= VKM) || (VKM >= seg * 18)).ToString().Replace("False"
 var seg19 = (!(seg * 18 <= VKM) || (VKM >= seg * 19)).ToString().Replace("False", "____V___|").Replace("True", "________|");
 var seg20 = (!(seg * 19 <= VKM) || (VKM >= seg * 20)).ToString().Replace("False", "____V___|").Replace("True", "________|");
 
-//Kelias ilgis kuriame susitiks
+//Kelias atstumas kuriame susitiks
 var seg21 = (VKM >= seg).ToString().Replace("False", "        ").Replace("True", "-------");
 var seg22 = ((seg <= VKM) || (VKM >= seg * 2)).ToString().Replace("False", "      ").Replace("True", "-------");
 var seg23 = ((seg * 2 <= VKM) || (VKM >= seg * 3)).ToString().Replace("False", "        ").Replace("True", "-------");
