@@ -68,8 +68,26 @@ namespace P011_Methods_Testai
             var actual = P11_Uzduotys.Program.KiektarpuGale(fake);
             Assert.AreEqual(expected, actual);
         }
+        // 10 uzduotis
+        [TestMethod]
+        public void KiekYraRaidziuA_Test1()
+        {
+            var fake = "as mokausi         programuoti     ";
+            var expected = 3;
+            var actual = P11_Uzduotys.Program.KiekYraRaidziuA(fake);
+            Assert.AreEqual(expected, actual);
+        }
+        // 11 uzduotis
+        [TestMethod]
+        public void ArYraZodisMokausi_Test1()
+        {
+            var fake = " as labai mokausi programuoti     ";
+        var expected = "Taip";
+        var actual = P11_Uzduotys.Program.ArYraZodisMokausi(fake);
+        Assert.AreEqual(expected, actual);
+        }
 
 
 
-    }
+}
 }

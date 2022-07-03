@@ -6,24 +6,24 @@
         {
             Console.WriteLine("Hello, World!");
             // 5 uzduotis
-           
+
             Console.WriteLine("Iveskite bet koki teksta");
             string Tekstas = Console.ReadLine();
-            Console.WriteLine($"Tekstas yra  {IsvalytiTarpus(Tekstas)}"); 
+            Console.WriteLine($"Tekstas yra  {IsvalytiTarpus(Tekstas)}");
             Console.WriteLine("------------------------");
 
             //6 uzduotis
             Console.WriteLine("Įveskite bet kokį teksta");
             Console.WriteLine($"Žodžių kiekis: {ZodziuKiekis(Console.ReadLine())}");
-
+            Console.WriteLine("------------------------");
             //7 uzduotis
             Console.WriteLine("Iveskite bet koki teksta su tarpais gale");
             Console.WriteLine($"Tarpai gale yra {KiektarpuGale(Console.ReadLine())}");
-
+            Console.WriteLine("------------------------");
             //8 uzduotis
             Console.WriteLine("Iveskite teksta su tarpais priekyje");
             Console.WriteLine($"Tarpai priekyje yra {KiektarpuPriekyje(Console.ReadLine())}");
-
+            Console.WriteLine("------------------------");
             //9 uzduotis
             /* vienas is variantu
             Console.WriteLine("Iveskite teksta su tarpais priekyje ir gale");
@@ -31,13 +31,62 @@
             Console.WriteLine($"Tarpai Gale = {TarpaiPriekyIrGale(out int tarpaiGale)}");
             */
             //Pagal destytojo
+            // int = Priekyje; Kintamaj igaliu deklaruoti ir cia tada prie metodo jau reiktu tik zodelio out, kadangi kintamasis deklaruotas
             Console.WriteLine("9. Iveskite teksta su tarpais priekyje ir gale");
-            TarpaiPriekyIrGale(Console.ReadLine(), out int Priekyje, out int tarpaiGale);
-            Console.WriteLine($" Priekyje = {Priekyje} Gale = {tarpaiGale}");
-
-   
             
+            TarpaiPriekyIrGale(Console.ReadLine(), out int Priekyje, out int tarpaiGale);
+            Console.WriteLine($" Priekyje = {Priekyje} Gale = {tarpaiGale}"); 
+            
+            //9.2 variantas 
+            int priekyje = TarpaiPriekyIrGale1(Console.ReadLine(), out int tarpaiGale1);
+            Console.WriteLine($" Priekyje = {priekyje} Gale = {tarpaiGale1}");
+            Console.WriteLine("------------------------");
+            //10 uzduotis
+
+            Console.WriteLine($" a raidziu yra = {KiekYraRaidziuA(Console.ReadLine())}"); //jei bus A did=ioji jos neskaiciuos
+            Console.WriteLine("------------------------");
+
+            //11 uzduotis
+
+
+
         }
+        /* 11 uzduotis
+         *  Parašykite programą kurioje vienas metodas. 
+    - Naudotojo paprašome įvesti betkokį tekstą Main metode. 
+    - Metodas grąžina žodžius Taip arba Ne ar tekste rado žodį 'mokausi'. N.B. grąžinama string, o ne bool.
+    -  Išvesti rezultatą Main metode.
+    Pvz: 
+    > Iveskite teksta:
+    _ ' as labai mokausi programuoti     '
+    > Ar yra mokausi: Taip
+        */
+        public static string ArYraZodisMokausi(string tekstas)
+        {
+            return tekstas.Contains("mokausi") ? "Taip" : "Ne";
+
+        }
+         
+          
+   
+        /* 10 uzduotis
+        Parašykite programą kurioje yra vienas metodas.
+    - Main metode Naudotojo paprašome įvesti betkokį tekstą su tarpais
+    - Įvestas teikstas kaip argumentas perduodamas metodui. Metodas grąžina 'a' raidžių kiekį tekste.
+    - Main metode į ekraną išveskite metodo darbo rezultatą
+
+  Pvz: 
+    > Iveskite teksta:
+
+  _ as mokausi programuoti
+    > 'a' raidžių kiekis yra: 3*/
+
+        public static int KiekYraRaidziuA(string tekstas)
+        {
+            
+            return tekstas.Length - tekstas.Replace("a", "").Length;
+        }
+       
 
         /* 9 uzduotis Parašykite programą kurioje vienas metodas. 
             - Naudotojo paprašome įvesti betkokį tekstą Main metode. 
@@ -55,6 +104,13 @@
             Priekyje = tekstas.Length - tekstas.TrimStart().Length;
             tarpaiGale = tekstas.Length - tekstas.TrimEnd().Length;
             
+        }
+        public static int TarpaiPriekyIrGale1(string? tekstas, out int tarpaiGale1)
+        {
+            
+            tarpaiGale1 = tekstas.Length - tekstas.TrimEnd().Length;
+            return tekstas.Length - tekstas.TrimStart().Length;
+
         }
 
         /* 8 uzduotisParašykite programą kurioje vienas metodas.
