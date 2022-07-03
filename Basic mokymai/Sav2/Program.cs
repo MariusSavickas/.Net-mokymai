@@ -187,7 +187,7 @@ if (Amzius != "" && GimimoDiena != "")  //Jei abu parametrai įvesti
             AmziausPatikimumas = "Amžius pameluotas";
         }
     }
- if (Amzius == "" || GimimoDiena != "") //Jei įvesta tik gimimo data
+ else if (Amzius == "" || GimimoDiena != "") //Jei įvesta tik gimimo data
     {
         if (Gimtadienis == GimimoData)
         {

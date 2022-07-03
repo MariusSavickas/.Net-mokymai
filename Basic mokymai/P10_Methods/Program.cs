@@ -88,7 +88,7 @@
                 return a + b;
             }
             Console.WriteLine(Add(Convert.ToInt32(Console.ReadLine()), 2));
-
+            Console.WriteLine(Add(10, 2));
 
             Console.WriteLine("-------------------------------");
 
