@@ -63,12 +63,70 @@
         */
         public static string ArYraZodisMokausi(string tekstas)
         {
-            return tekstas.Contains("mokausi") ? "Taip" : "Ne";
+            tekstas = " " + tekstas + " ";
+            return tekstas.ToLower().Contains(" mokausi ") ? "Taip" : "Ne";
+           // return tekstas.Contains("mokausi", StringComparison.OrdinalIgnoreCase) ? "Taip" : "Ne";  //kitoks būdas
 
         }
-         
-          
-   
+
+        #region 11A uzduotis
+        /*
+        Namu darbo užduotis būtuL
+UŽDUOTIS 11A(sunkense) + testai
+
+ Parašykite programą kurioje vienas metodas.
+    - Naudotojo paprašome įvesti betkokį tekstą Main metode.
+    - Metodas grąžina žodžius Taip arba Ne ar tekste rado žodį 'mokausi'. 
+        Bet tik tuo atveju jei žodis 'mokausi' nesulipęs su kitu žodžiu.
+        N.B.grąžinama string, o ne bool.
+    -  Išvesti rezultatą Main metode.
+
+    1. Pvz: 
+    > Iveskite teksta:
+    _ ' as labai mokausi programuoti     '
+    > Ar yra mokausi: Taip
+
+    2. Pvz2: 
+    > Iveskite teksta:
+    _ 'aslabaimokausiprogramuoti'
+    > Ar yra mokausi: Ne
+
+    3. Pvz3: 
+    > Iveskite teksta:
+    _ 'mokausi programuoti labai    '
+    > Ar yra mokausi: Taip
+
+    4. Pvz4: 
+    > Iveskite teksta:
+    _ 'as mokausi, labai stipriai'
+    > Ar yra mokausi: Taip
+    5. Pvz5: 
+    > Iveskite teksta:
+    _ 'as mokausi!'
+    > Ar yra mokausi: Taip
+    6. Pvz6: 
+    > Iveskite teksta:
+    _ 'as mokausi?'
+    > Ar yra mokausi: Taip
+    Pvz7: 
+    > Iveskite teksta:
+    _ 'as studijuoju (mokausi)'
+    > Ar yra mokausi: Taip
+    Pvz8: 
+    > Iveskite teksta:
+    _ 'as studijuojumokausi)'
+    > Ar yra mokausi: Ne
+        */
+        #endregion
+       public static string ArYraZodisMokausi1(string tekstas)
+        {
+            tekstas = " " + tekstas + " ";
+            return tekstas.ToLower().Replace(","," ").Replace("!", " ").Replace("?", " ").Replace("(", " ").Replace(")", " ").Contains(" mokausi ") ? "Taip" : "Ne";
+            // return tekstas.Contains("mokausi", StringComparison.OrdinalIgnoreCase) ? "Taip" : "Ne";  //kitoks būdas
+
+        }
+
+
         /* 10 uzduotis
         Parašykite programą kurioje yra vienas metodas.
     - Main metode Naudotojo paprašome įvesti betkokį tekstą su tarpais
