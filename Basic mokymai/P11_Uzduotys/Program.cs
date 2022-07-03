@@ -9,7 +9,7 @@
            
             Console.WriteLine("Iveskite bet koki teksta");
             string Tekstas = Console.ReadLine();
-            IsvalytiTarpus(Tekstas);
+            Console.WriteLine($"Tekstas yra  {IsvalytiTarpus(Tekstas)}"); 
             Console.WriteLine("------------------------");
 
             //6 uzduotis
@@ -25,11 +25,15 @@
             Console.WriteLine($"Tarpai priekyje yra {KiektarpuPriekyje(Console.ReadLine())}");
 
             //9 uzduotis
+            /* vienas is variantu
             Console.WriteLine("Iveskite teksta su tarpais priekyje ir gale");
-            Console.WriteLine($"Tarpai priekyje = {TarpaiPriekyIrGale(Console.ReadLine(), out int tarpaiGale)}");
-            Console.WriteLine($"Tarpai Gale = {tarpaiGale}");
-            
-
+            Console.WriteLine($"Tarpai priekyje = {TarpaiPriekyIrGale(Console.ReadLine(), out int Priekyje)}");
+            Console.WriteLine($"Tarpai Gale = {TarpaiPriekyIrGale(out int tarpaiGale)}");
+            */
+            //Pagal destytojo
+            Console.WriteLine("9. Iveskite teksta su tarpais priekyje ir gale");
+            TarpaiPriekyIrGale(Console.ReadLine(), out int Priekyje, out int tarpaiGale);
+            Console.WriteLine($" Priekyje = {Priekyje} Gale = {tarpaiGale}");
 
    
             
@@ -46,10 +50,11 @@
             > Pradžioje yra tarpų: 1
             > Gale yra tarpų: 6
             */
-        public static int TarpaiPriekyIrGale(string? tekstas, out int tarpaiGale)
+        public static void TarpaiPriekyIrGale(string? tekstas, out int Priekyje, out int tarpaiGale)
         {
+            Priekyje = tekstas.Length - tekstas.TrimStart().Length;
             tarpaiGale = tekstas.Length - tekstas.TrimEnd().Length;
-            return tekstas.Length - tekstas.TrimStart().Length;
+            
         }
 
         /* 8 uzduotisParašykite programą kurioje vienas metodas.
@@ -92,14 +97,7 @@ return Tekstas.Length - Tekstas.TrimEnd().Length;
            */
         public static int ZodziuKiekis(string? v)
         {
-            if (v.Trim().Replace(" ", "") != "")
-            {
-                return v.Trim().Length - v.Trim().Replace(" ", "").Length + 1;
-            }
-            else
-            {
-                return 0;
-            }
+            return v.Trim().Split(" ", StringSplitOptions.RemoveEmptyEntries).Length;
         }
 
         /* 5 uzduotis
@@ -111,9 +109,10 @@ Pvz:
           _ ' as mokausi '
           > Teksto ilgis yra: 10
           */
-        public static void IsvalytiTarpus(string Tekstas)
+        public static int IsvalytiTarpus(string Tekstas)
 {
-Console.WriteLine($"Tekstas yra {Tekstas.Trim().Length}.");
+            //Console.WriteLine($"Tekstas yra {Tekstas.Trim().Length}.");
+            return Tekstas.Trim().Length;
 }
 }
 }
