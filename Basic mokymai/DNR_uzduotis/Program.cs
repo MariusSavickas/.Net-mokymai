@@ -37,10 +37,12 @@
                     Console.WriteLine("");
                 }
             }
-            else
+            else 
             {
                 Console.WriteLine("Kodas nevalidus toliau negalime atlikti jokių veiksmų");
             }
+
+            string Normalizuota = BeTarpuIrDidziosiomisRaidemis(txt);
 
 
             if (pasirinkau == "1")
@@ -49,7 +51,7 @@
                 Console.WriteLine("Pateikite savo pasirinkimą");
                 pasirinkimas3 = Console.ReadLine();
                 pasirinkau3 = pasirinkimas3;
-                Console.WriteLine(Ivestis2(pasirinkau3, txt));
+                Console.WriteLine(Ivestis2(pasirinkau3, txt, Normalizuota));
             }
                                            
             else
@@ -57,19 +59,7 @@
                 Console.WriteLine("");
             }
 
-
-
-
-
-           
-
             
-
-
-
-
-
-
         }
 
         
@@ -139,24 +129,73 @@ Meniu
             return txt1;
         }
 
-        public static string Ivestis2(string pasirinkau3, string txt) //Įvestis Sub-Meniu
+        public static string Ivestis2(string pasirinkau3, string txt, string Normalizuota) //Įvestis Sub-Meniu
         {
 
 
             switch (pasirinkau3)
             {
                 case "1":
-                    return KeičiamGCT(txt);
+                    return KeičiamGCT(Normalizuota);
                 case "2":
-                    return "------Press Enter------";
+                    return SurastiCAT(Normalizuota);
+                case "3":
+                    return TreciasIrPenktasSegmentas(Normalizuota);
+                case "4":
+                    return RaidžiuKiekis(Normalizuota);
+                case "5":
+                    return IeskomeIvestoSegmento(Normalizuota);
             }
             return "Blogas pasirinkimas, tokio punkto net nėra";
         }
 
-        public static string KeičiamGCT(string txt)
+        public static string IeskomeIvestoSegmento(string Normalizuota)
         {
-            string txt1 = BeTarpuIrDidziosiomisRaidemis(txt);
-            return txt1.Replace("GCT", "AGG");
+            Console.WriteLine("Iveskit norima segmenta");
+            string Segmentas = Console.ReadLine();
+            if (Normalizuota.Contains(Segmentas) == true)
+            {
+                return "super";
+            }
+            else
+            {
+                return "Tokio segmento nėra";
+            }
+            
+                    
+        }
+
+        public static string RaidžiuKiekis(string Normalizuota) //skaičiuojame raide, išvedame kompozicijos būdų
+        {
+
+           var b = Normalizuota;
+            var c = string.Format("Raidžių kiekis yra = {0}", b.Length);
+            return $"{c}";
+        }
+        
+        public static string TreciasIrPenktasSegmentas(string Normalizuota) //Surandame trečią ir penktą segmentą
+        {
+            string TreciasSegmentas = Normalizuota.Substring(6).Substring(0, 3);
+            string PenktasSegmentas = Normalizuota.Substring(12).Substring(0,3);
+            return $"Trečias segmentas = {TreciasSegmentas} \nPenktas segmentas = {PenktasSegmentas}";
+        }
+
+        public static string SurastiCAT(string Normalizuota) //CAT radimas grandinėje
+        {
+            if (Normalizuota.Contains("CAT") == true )
+            {
+                return "CAT buvo rasta";
+            }
+            else
+            {
+                return "CAT nebuvo rasta";
+            }
+        }
+
+        public static string KeičiamGCT(string Normalizuota) //Keičiam GCT į AGG
+        {
+            
+            return Normalizuota.Replace("GCT", "AGG");
         }
 
         public static string PatikrinameValidacija(string txt)  //Grandines Validacija
