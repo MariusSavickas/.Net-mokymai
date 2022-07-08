@@ -121,8 +121,8 @@ UŽDUOTIS 11A(sunkense) + testai
        public static string ArYraZodisMokausi1(string tekstas)
         {
             tekstas = " " + tekstas + " ";
-            return tekstas.ToLower().Replace(","," ").Replace("!", " ").Replace("?", " ").Replace("(", " ").Replace(")", " ").Contains(" mokausi ") ? "Taip" : "Ne";
-            // return tekstas.Contains("mokausi", StringComparison.OrdinalIgnoreCase) ? "Taip" : "Ne";  //kitoks būdas
+            return tekstas.Replace(","," ").Replace("!", " ").Replace("?", " ").Replace("(", " ").Replace(")", " ").Contains(" mokausi ") ? "Taip" : "Ne";
+          
 
         }
 
