@@ -60,6 +60,8 @@
             }
 
             
+
+            
         }
 
         
@@ -145,11 +147,70 @@ Meniu
                     return RaidžiuKiekis(Normalizuota);
                 case "5":
                     return IeskomeIvestoSegmento(Normalizuota);
+                case "6": 
+                    return IvedamSegmentaGale(Normalizuota);
+                case "7":
+                    return PasalinamNorimaElementa(Normalizuota);
+                case "8":
+                    return "Galvojam";
+                    case "9":
+                    return SubMeniu1(txt);
             }
             return "Blogas pasirinkimas, tokio punkto net nėra";
         }
 
-        public static string IeskomeIvestoSegmento(string Normalizuota)
+
+        public static string PasalinamNorimaElementa(string Normalizuota) //Šaliname normą elemntą jei toks yra
+        {
+            Console.WriteLine("Įveskite elemeną, kurį nortie pašalinti");
+            string IvedamsElementas = Console.ReadLine();
+             
+
+            if (Normalizuota.Contains(IvedamsElementas) == true)
+            {
+                return Normalizuota.Replace(IvedamsElementas, "");
+            }
+            else
+            {
+                return "Elementas nebuvo rastas";
+            }
+        }
+
+        public static string IvedamSegmentaGale(string Normalizuota) //Segmento pridėjimas gale
+        {
+            Console.WriteLine("Įveskite trijų raidžių segmentą");
+            string IvestasSegmentas = Console.ReadLine();
+            string Segmentas = IvestasSegmentas.ToUpper();
+            
+            if (Segmentas.Length == 3)
+            {
+                if (Segmentas.Contains("Z") || Segmentas.Contains("X") || Segmentas.Contains("V") || Segmentas.Contains("B") || Segmentas.Contains("N") || Segmentas.Contains("M") || Segmentas.Contains("S")
+                || Segmentas.Contains("D") || Segmentas.Contains("F") || Segmentas.Contains("H") || Segmentas.Contains("J") || Segmentas.Contains("K") || Segmentas.Contains("L") || Segmentas.Contains("Q")
+                || Segmentas.Contains("W") || Segmentas.Contains("E") || Segmentas.Contains("R") || Segmentas.Contains("Y") || Segmentas.Contains("U") || Segmentas.Contains("I") || Segmentas.Contains("O")
+                || Segmentas.Contains("P"))
+                {
+                    return "Segmentas neteisingas";
+                }
+                else
+                {
+                    return (Normalizuota+Segmentas);
+                }
+            }
+            else if (Segmentas.Length == 0)
+            {
+                return "Segmentas nebuvo įvestas";
+            }
+            else if (Segmentas.Length < 3)
+            {
+                return "Segmentas per trumpas";
+            }
+            else
+            {
+                return "Segmentas per ilgas";
+            }
+        }
+
+        public static string IeskomeIvestoSegmento(string Normalizuota) //reik dar pridėti skaičiavimą kiek kartų
         {
             Console.WriteLine("Iveskit norima segmenta");
             string Segmentas = Console.ReadLine();
@@ -214,8 +275,7 @@ Meniu
             {
                 return "Kodas yra validus";
             }
-            
-            return txt1;
+                      
         }
            
         public static string BeTarpuIrDidziosiomisRaidemis(string txt) //Grandines Normalizacija
