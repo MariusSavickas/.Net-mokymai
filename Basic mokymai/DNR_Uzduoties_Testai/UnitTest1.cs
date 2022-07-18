@@ -3,6 +3,7 @@ namespace DNR_Uzduoties_Testai
     [TestClass]
     public class DNR_Uzduoties_Testai
     {
+        /*
         #region BeTarpuIrDidziosiomisRaidemis_Testai
         [TestMethod]
         public void BeTarpuIrDidziosiomisRaidemis_Test1()
@@ -177,15 +178,142 @@ namespace DNR_Uzduoties_Testai
             var expected = "Segmentas buvo rastas"; 
             var actual = DNR_uzduotis.Program.IeskomeIvestoSegmento(Segmentas, fake1);
             Assert.AreEqual(expected, actual);
+        
         }
-        #endregion
-        #region SurastiCAT_Testai
-        #endregion
-        #region SurastiCAT_Testai
-        #endregion
-        #region SurastiCAT_Testai
-        #endregion
-        #region SurastiCAT_Testai
-        #endregion
+*/
+
+        string dnr = "TCG-TAC-GAC-TAC-CGT-CAG-ACT-TAA-CCA-GTC-CAT-AGA-GCT"; //Globalus kintamasis
+        int iteration = 10_000_000; //Kiek kartø norime kartoti operacija
+        [TestMethod]
+
+        public void DNRGrandinesValidacija_Replace_Test()
+        {
+            var actual = false;
+            for (int i = 0; i < iteration; i++)
+            {
+                actual = P016_Ciklai2.Program.DNRGrandinesValidacija_Replace(dnr);
+            }
+            Assert.IsTrue(actual);
+
+        }
+
+        [TestMethod]
+
+        public void DNRGrandinesValidacija_Replace_False()
+        {
+            string baddnr = "QTCG-TAC-GAC-TAC-CGT-CAG-ACT-TAA-CCA-GTC-CAT-AGA-GCT";
+            var actual = false;
+            for (int i = 0; i < iteration; i++)
+            {
+                actual = P016_Ciklai2.Program.DNRGrandinesValidacija_Replace(baddnr);
+            }
+            Assert.IsFalse(actual);
+
+        }
+        [TestMethod]
+
+        public void DNRGrandinesValidacija_For_Test()
+        {
+            var actual = false;
+            for (int i = 0; i < iteration; i++)
+            {
+                actual = P016_Ciklai2.Program.DNRGrandinesValidacija_For(dnr);
+            }
+            Assert.IsTrue(actual);
+
+        }
+        [TestMethod]
+        public void DNRGrandinesValidacija_For_False()
+        {
+            string baddnr = "QTCG-TAC-GAC-TAC-CGT-CAG-ACT-TAA-CCA-GTC-CAT-AGA-GCT";
+            var actual = false;
+            for (int i = 0; i < iteration; i++)
+            {
+                actual = P016_Ciklai2.Program.DNRGrandinesValidacija_For(baddnr);
+            }
+            Assert.IsFalse(actual);
+
+        }
+        [TestMethod]
+        public void KiekKartuPasiakrtoja_For_Interpolation_Test()
+        {
+            var actual = 0;
+            var expected = 1;
+            for (int i = 0; i < iteration; i++) { }
+            {
+                actual = P016_Ciklai2.Program.KiekKartuPasiakrtoja_For_Interpolation(dnr, "CCA");
+            }
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void KiekKartuPasiakrtoja_For_Composition_Test()
+        {
+            var actual = 0;
+            var expected = 1;
+            for (int i = 0; i < iteration; i++) { }
+            {
+                actual = P016_Ciklai2.Program.KiekKartuPasiakrtoja_For_Composition(dnr, "CCA");
+            }
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void KiekKartuPasiakrtoja_For_Concat()
+        {
+            var actual = 0;
+            var expected = 1;
+            for (int i = 0; i < iteration; i++) { }
+            {
+                actual = P016_Ciklai2.Program.KiekKartuPasiakrtoja_For_Concat(dnr, "CCA");
+            }
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void KiekKartuPasikartoja_For_StringBuilder_Test()
+        {
+            var actual = 0;
+            var expected = 1;
+            for (int i = 0; i < iteration; i++) { }
+            {
+                actual = P016_Ciklai2.Program.KiekKartuPasikartoja_For_StringBuilder(dnr, "CCA");
+            }
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void KiekKartuPasikartoja_For_StringConstructor_Test()
+        {
+            var actual = 0;
+            var expected = 1;
+            for (int i = 0; i < iteration; i++) { }
+            {
+                actual = P016_Ciklai2.Program.KiekKartuPasikartoja_For_StringConstructor(dnr, "CCA");
+            }
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void KiekKartuPasikartoja_For_Substring()
+        {
+            var actual = 0;
+            var expected = 1;
+            for (int i = 0; i < iteration; i++) { }
+            {
+                actual = P016_Ciklai2.Program.KiekKartuPasikartoja_For_Substring(dnr, "CCA");
+            }
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void IntegerToBinary_Test()
+        {
+            var fake = 45;           
+            var expected = "101101";
+            
+              var  actual = P017For_Uzduotys.Program.IntegerToBinary(fake);
+            
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }

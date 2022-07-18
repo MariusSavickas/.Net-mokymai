@@ -17,6 +17,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DNR_uzduotis\DNR_uzduotis.csproj" />
+    <ProjectReference Include="..\P016_Ciklai2\P016_Ciklai2.csproj" />
+    <ProjectReference Include="..\P017For_Uzduotys\P017For_Uzduotys.csproj" />
   </ItemGroup>
 
 </Project>
