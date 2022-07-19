@@ -91,6 +91,81 @@ int[] mas = { 5, 3, 7, 16, 8, 7, 10 };
             Console.WriteLine(string.Join(",", mas));
             return mas;
         }
+/*
+## RIKIUOTI TRIS RAIDES ##
+        Parašykite programą kurioje vienas metodas.
+  - Naudotojo paprašome įvesti 3 raides(atskirai). 
+    Būtina validacija kad įvesta tik vienas simbolis.
+  - Metodas priima masyvą iš char ir grąžina masyvą iš char - surikiuotas raides pagal abecelę.
+  Pvz: 
+  > Iveskite pirma raide:
+  _ C
+  > Iveskite antra raide:
+  _ D
+  > Iveskite trecia raide:
+  _ B
+  >  B, C, D*/
+
+        public static char[ ] RikiuotiTrisRaides(char[] mas)
+        {
+            for (int i = 0; i < mas.Length; i++)
+            {
+                for (int j = i + 1; j < mas.Length; j++)
+                {
+                    if (mas[i] > mas[j])
+                    {
+                        char temp = mas[i];
+                        mas[i] = mas[j];
+                        mas[j] = temp;
+                    }
+
+                }
+            }
+            return mas;
+        }
+        /*
+## RIKIUOTI KETURIAS RAIDES ## 
+        Parašykite programą kurioje vienas metodas.
+            - Naudotojo paprašome įvesti 4 raides(atskirai). 
+              Būtina validacija kad įvesta tik vienas simbolis.
+            - Metodas priima masyvą iš string (su prielaidai kad kiekvienas string yra tik 1 raide) 
+              ir grąžina string (NB! ne masyvą) - surikiuotas raides pagal abecelę atskirtas -. 
+            Pvz: 
+            > Iveskite pirma raide:
+            _ C
+            > Iveskite antra raide:
+            _ A
+            > Iveskite trecia raide:
+            _ B
+            > Iveskite ketvirtą raide:
+            _ E
+            > A-B-C-E*/
+
+        public static string RikiuotiKeturiasRaides(string[] raides)
+        {
+            char[] mas = new char[raides.Length];
+            for (int i = 0; i < raides.Length; i++)
+            {
+                mas[i] = raides[i][0]; //rasome 0, kad string butu char
+                //string raide = raides[i];
+                //mas[i] = raide[0];
+            }
+
+            for (int i = 0; i < mas.Length; i++)
+            {
+                for (int j = i + 1; j < mas.Length; j++)
+                {
+                    if (mas[i] > mas[j])
+                    {
+                        char temp = mas[i];
+                        mas[i] = mas[j];
+                        mas[j] = temp;
+                    }
+
+                }
+            }
+            return string.Join("-", mas);
+        }
 
 
 
