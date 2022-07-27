@@ -56,4 +56,18 @@ namespace P021_List_Test
         
 
     }
-}
+
+    [TestClass]
+    public class P022_ForEach
+    {
+        [TestMethod]
+        public void RastiDidziausia_Test()
+        {
+            List<int> fake = new List<int> { 5, 1, 6, 8, 7 };
+            var expected = 8;
+            var actual = P021_List.Program.RastiDidziausia(fake);
+            Assert.AreEqual(expected, actual);
+
+
+        }
+    }

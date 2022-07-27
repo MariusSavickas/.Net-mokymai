@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\P021_List\P021_List.csproj" />
+    <ProjectReference Include="..\P022_ForEach\P022_ForEach.csproj" />
   </ItemGroup>
 
 </Project>
